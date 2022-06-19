@@ -1,0 +1,15 @@
+.span-primary{
+    @include btnPri($pd-btn-1,$pd-btn-2,$color-pri,$pd-btn-2);
+    &:hover{
+        @include btnHover($color-pri,$color-pri,$color-white)
+    }
+}
+
+.btn-primary{
+    @include btnPri(14px,55px,$color-pri,55px);
+    @include txtStyle($color-white,$fs-1,$fw-2);
+    border: none;
+    &:hover{
+        @include btnHover($color-pri,$color-pri,$color-white)
+    }
+}

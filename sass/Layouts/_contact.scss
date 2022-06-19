@@ -1,0 +1,65 @@
+.contact{
+    .contact-cover{
+        padding-top: $pd-cover;
+    }
+    .contact-cell{
+        max-width: 1000px;
+        margin: auto;
+        padding-top: $pd-11;
+        padding-bottom: $pd-10;
+    }
+    .contact-bottom-wave{
+      background-image: url('../../img/accent_bottom_wave_01.png');
+      @include bgImg;
+      height: 25vw;
+      }
+      .col-lg-5{
+        @include boxShadow;
+        z-index: 3;
+        background-color: $color-white;
+        height: 100%;
+    }
+    .col-lg-7{
+      z-index: 3;
+    }
+  .contact-form {
+    h2{
+        @include txtStyle($color-dark,$fs-4,$fw-3)
+    }
+    input,
+    textarea,
+    select {
+     @include inputForm($color-dark,$fs-9,$fw-4,$color-white,#ececec);
+     &:focus-visible{
+        @include inputFormFocus
+     }
+    }
+    i{
+        @include txtStyle($color-pri, $fs-1, $fw-4);
+        top: 14px;
+        left: 24px;
+    }
+    .btn-form{
+        padding: $pd-3 0;
+        .btn-primary{
+          width: 100%;
+        }
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+  .contact{
+    .contact-form{
+      .d-flex{
+        flex-direction: row !important;
+      }
+      .btn-form{
+        .btn-primary{
+          width: 150px;
+        }
+      }
+    }
+  }
+  
+}
